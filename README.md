@@ -5,11 +5,14 @@
 [![License](https://img.shields.io/cocoapods/l/RxSemaphore.svg?style=flat)](https://cocoapods.org/pods/RxSemaphore)
 [![Platform](https://img.shields.io/cocoapods/p/RxSemaphore.svg?style=flat)](https://cocoapods.org/pods/RxSemaphore)
 
+This operator's arguments include multiple source observables and a transform closure (optional). Each element in a source observable means the start of a new task, and more importantly, it ends the previous task. With multiple source observables, multiple tasks exist at the same time. This operator is like a serial queue, and these tasks are queued. If a task is pending, and the relevant observable emits a new element, this task will be cancelled and the new one will be queued.
+
 ## Example
 
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
+To run the example playground, clone the repo, and run `pod install` from the Example directory first.
 
 ## Requirements
+* [RxSwift](https://github.com/ReactiveX/RxSwift)
 
 ## Installation
 
