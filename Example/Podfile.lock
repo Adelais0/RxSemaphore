@@ -1,0 +1,31 @@
+PODS:
+  - Nimble (7.3.4)
+  - Quick (1.2.0)
+  - RxSemaphore (0.1.0):
+    - RxSwift
+  - RxSwift (5.0.1)
+
+DEPENDENCIES:
+  - Nimble (~> 7.0)
+  - Quick (~> 1.2.0)
+  - RxSemaphore (from `../`)
+
+SPEC REPOS:
+  https://cdn.cocoapods.org/:
+    - Nimble
+    - Quick
+    - RxSwift
+
+EXTERNAL SOURCES:
+  RxSemaphore:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  Nimble: 051e3d8912d40138fa5591c78594f95fb172af37
+  Quick: 58d203b1c5e27fff7229c4c1ae445ad7069a7a08
+  RxSemaphore: 879f957637c2521334d7c82d84d24a155ba80eb3
+  RxSwift: e2dc62b366a3adf6a0be44ba9f405efd4c94e0c4
+
+PODFILE CHECKSUM: 7b0da46a640d2d6c1222db83375feefdffe6f449
+
+COCOAPODS: 1.8.4

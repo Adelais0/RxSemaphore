@@ -30,8 +30,8 @@
 /* Begin PBXFileReference section */
 		1019F243B93FB46AB4EC1207 /* Pods_RxSemaphore_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RxSemaphore_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		156EFA4FE03FDBE7118BA4C6 /* Pods_RxSemaphore_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RxSemaphore_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		290B461DD3E47AB55373FDC3 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
-		2BB589A71D4D03649D4A0C81 /* RxSemaphore.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = RxSemaphore.podspec; path = ../RxSemaphore.podspec; sourceTree = "<group>"; };
+		290B461DD3E47AB55373FDC3 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		2BB589A71D4D03649D4A0C81 /* RxSemaphore.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = RxSemaphore.podspec; path = ../RxSemaphore.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		607FACD01AFB9204008FA782 /* RxSemaphore_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RxSemaphore_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -45,7 +45,7 @@
 		714C7BD20A91ADFA77BA0881 /* Pods-RxSemaphore_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxSemaphore_Tests.debug.xcconfig"; path = "Target Support Files/Pods-RxSemaphore_Tests/Pods-RxSemaphore_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		8C5B1B8FB0ABFDD3C1839B62 /* Pods-RxSemaphore_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxSemaphore_Example.debug.xcconfig"; path = "Target Support Files/Pods-RxSemaphore_Example/Pods-RxSemaphore_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		9142A3C1B4FBECC1175743E6 /* Pods-RxSemaphore_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxSemaphore_Example.release.xcconfig"; path = "Target Support Files/Pods-RxSemaphore_Example/Pods-RxSemaphore_Example.release.xcconfig"; sourceTree = "<group>"; };
-		EB955022372DA5A5FAFA8F28 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		EB955022372DA5A5FAFA8F28 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		FFD3321868ADE91F2D692EC3 /* Pods-RxSemaphore_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxSemaphore_Tests.release.xcconfig"; path = "Target Support Files/Pods-RxSemaphore_Tests/Pods-RxSemaphore_Tests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -156,7 +156,6 @@
 				714C7BD20A91ADFA77BA0881 /* Pods-RxSemaphore_Tests.debug.xcconfig */,
 				FFD3321868ADE91F2D692EC3 /* Pods-RxSemaphore_Tests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -228,6 +227,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -271,10 +271,12 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-RxSemaphore_Example/Pods-RxSemaphore_Example-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/RxSemaphore/RxSemaphore.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSemaphore.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
