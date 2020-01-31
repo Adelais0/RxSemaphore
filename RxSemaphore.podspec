@@ -18,19 +18,17 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.homepage         = 'https://github.com/Adelais0/RxSemaphore'
-  # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Adelais0' => 'lilingfengzero@gmail.com' }
   s.source           = { :git => 'https://github.com/Adelais0/RxSemaphore.git', :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
+
+  s.swift_versions = '5.0', '5.1'
+  s.ios.deployment_target = '8.0'
+  s.osx.deployment_target = '10.9'
+  s.watchos.deployment_target = '3.0'
+  s.tvos.deployment_target = '9.0'
 
   s.source_files = 'RxSemaphore/**/*'
-  
-  # s.resource_bundles = {
-  #   'RxSemaphore' => ['RxSemaphore/Assets/*.png']
-  # }
 
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-   s.dependency 'RxSwift'
+  s.dependency 'RxSwift', '~> 5.0'
 end
