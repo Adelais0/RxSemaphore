@@ -9,7 +9,62 @@ This operator's arguments include multiple source observables and a transform cl
 
 ## Example
 
-To run the example playground, clone the repo, and run `pod install` from the Example directory first.
+To run the `Example.playground`, clone the repo, and run `pod install` from the Example directory first.
+
+```swift
+let o1 = PublishSubject<Int>()
+let o2 = PublishSubject<Int>()
+
+Observable.semaphore([o1, o2])
+    .subscribe(onNext: { value in
+        print(value)
+    })
+    .disposed(by: disposeBag)
+
+o1.onNext(1)
+o2.onNext(2)
+o2.onNext(3)
+o1.onNext(4)
+o2.onCompleted()
+o1.onCompleted()
+```
+```
+wait(1)
+signal
+wait(3)
+signal
+wait(4)
+signal
+```
+
+For `nil` used as signal, I provide a convenient version without `RxSemaphoreAction` wrapped:
+
+```swift
+let o1 = PublishSubject<Int?>()
+let o2 = PublishSubject<Int?>()
+
+Observable.semaphore([o1, o2])
+    .subscribe(onNext: { value in
+        print(value)
+    })
+    .disposed(by: disposeBag)
+
+o1.onNext(1)
+o2.onNext(2)
+o2.onNext(nil)
+o1.onNext(3)
+o2.onNext(4)
+o1.onNext(nil)
+o2.onCompleted()
+```
+```
+Optional(1)
+nil
+Optional(3)
+nil
+Optional(4)
+nil
+```
 
 ## Requirements
 * [RxSwift](https://github.com/ReactiveX/RxSwift)
