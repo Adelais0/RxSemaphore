@@ -9,7 +9,7 @@ This operator's arguments include multiple source observables and a transform cl
 
 ## Example
 
-To run the `Example.playground`, clone the repo, and run `pod install` from the Example directory first.
+To run the `Example.playground`, clone the repo, and run `pod install` from the Example directory first.
 
 ```swift
 let o1 = PublishSubject<Int>()

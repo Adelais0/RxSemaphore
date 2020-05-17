@@ -1,8 +1,7 @@
 {
   "name": "RxSemaphore",
   "version": "0.1.0",
-  "summary": "A short description of RxSemaphore.",
-  "description": "TODO: Add long description of the pod here.",
+  "summary": "Single Semaphore Plus Cancellable in RxSwift",
   "homepage": "https://github.com/Adelais0/RxSemaphore",
   "license": {
     "type": "MIT",
@@ -15,13 +14,21 @@
     "git": "https://github.com/Adelais0/RxSemaphore.git",
     "tag": "0.1.0"
   },
+  "swift_versions": [
+    "5.0",
+    "5.1"
+  ],
   "platforms": {
-    "ios": "8.0"
+    "ios": "8.0",
+    "osx": "10.9",
+    "watchos": "3.0",
+    "tvos": "9.0"
   },
   "source_files": "RxSemaphore/**/*",
   "dependencies": {
     "RxSwift": [
-
+      "~> 5.0"
     ]
-  }
+  },
+  "swift_version": "5.1"
 }
