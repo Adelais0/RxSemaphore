@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'RxSemaphore'
-  s.version          = '0.1.0'
+  s.version          = '0.2.0'
   s.summary          = 'Single Semaphore Plus Cancellable in RxSwift'
 
 # This description is used to generate tags and improve search results.
